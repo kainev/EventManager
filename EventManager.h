@@ -156,6 +156,7 @@ inline auto CallbackContainer<T>::add_callback(T_Function callback) -> ListenerH
     {
         sparse_index = free_sparse_indices.front();
         free_sparse_indices.pop();
+        sparse[sparse_index].m_dense_index = callbacks.size();
     }
 
     dense.push_back(sparse_index);
