@@ -36,6 +36,7 @@ public:
 
 struct CallbackContainerBase
 {
+    virtual ~CallbackContainerBase() = default;
     virtual void remove_callback(const ListenerHandle& handle) = 0;
 };
     
