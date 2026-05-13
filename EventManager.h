@@ -136,7 +136,7 @@ inline EventID EventManager::get_event_id()
 template<typename T>
 inline EventID EventManager::register_event()
 {
-    s_callbacks.emplace_back(std::make_unique<CallbackContainer<T*>>(s_next_event_id));
+    s_callbacks.emplace_back(std::make_unique<CallbackContainer<T>>(s_next_event_id));
     return s_next_event_id++;
 }
 
